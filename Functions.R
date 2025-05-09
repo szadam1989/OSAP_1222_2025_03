@@ -7,6 +7,7 @@ isNA_or_Zero <- function(number) {
   }
   
   return(FALSE)
+
 }
 
 if_file_exists_remove <- function(filename) {
@@ -27,20 +28,6 @@ getCountryCode_MG02 <- function(CountryCodeMG94){
   }
   
   return(MG02)
+
 }
 
-#Az XLSX állománnyá történő konvertálást másként oldom meg
-#library("rio")
-#help("rio")
-
-#proc_filenames <- list.files(path = paste(getwd(), "/Excel_Files/", sep = ""), full.names = TRUE) #
-#proc_filenames_short <- list.files(path = paste(getwd(), "/Excel_Files/", sep = "")) #
-
-#for(k in 1:length(proc_filenames)){
-  
-#  if (!grepl("xlsx", proc_filenames[k])){
-#    x <- import(proc_filenames[k])
-#    convert(x, paste(proc_filenames_short[k], "x", sep = ""))
-#  }
-
-#}
