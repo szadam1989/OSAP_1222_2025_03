@@ -34,21 +34,7 @@ process_second_table <- function() {
     
     Kilepo <- sum(Kilepo_HELYI, Kilepo_TAVOLSAGI, Kilepo_CHARTER, na.rm = TRUE)
     
-    
-    #Belepo <- as.integer(gsub("\\s", "", as.character(worksheet_02[3, 6], fixed = TRUE))) + as.integer(gsub("\\s", "", as.character(worksheet_02[3, 8], fixed = TRUE))) + as.integer(gsub("\\s", "", as.character(worksheet_02[3, 10], fixed = TRUE))) #Helyi, távolsági és charter buszok száma belépő
-    
-    #Kilepo <- as.integer(gsub("\\s", "", as.character(worksheet_02[3, 7], fixed = TRUE))) + as.integer(gsub("\\s", "", as.character(worksheet_02[3, 9], fixed = TRUE))) + as.integer(gsub("\\s", "", as.character(worksheet_02[3, 11], fixed = TRUE))) #Helyi, távolsági és charter buszok száma kilépő
-    
     Osszesen <- sum(Belepo, Kilepo, na.rm = TRUE) #Buszok belépő + kilépő
- #   print(as.integer(gsub("\\s", "", as.character(worksheet_02[3, 6], fixed = TRUE))))
-#    print(as.integer(gsub("\\s", "", as.character(worksheet_02[3, 8], fixed = TRUE))))
- #   print(as.integer(gsub("\\s", "", as.character(worksheet_02[3, 10], fixed = TRUE))))
-  #  print(as.integer(gsub("\\s", "", as.character(worksheet_02[3, 7], fixed = TRUE))))
-  #  print(as.integer(gsub("\\s", "", as.character(worksheet_02[3, 9], fixed = TRUE))))
-  #  print(as.integer(gsub("\\s", "", as.character(worksheet_02[3, 11], fixed = TRUE))))
-  #  print(Belepo)
-  #  print(Kilepo)
-  #  print(Osszesen)
     
     if (isNA_or_Zero(Belepo)){
       cat(paste(TEV, MHO, 2, MG05, MG60_2, Belepo, sep = ";"), sep = "\n", file = DatabaseTable_2, append = TRUE)
@@ -61,9 +47,6 @@ process_second_table <- function() {
     if (isNA_or_Zero(Osszesen)){
       cat(paste(TEV, MHO, "=", MG05, MG60_2, Osszesen, sep = ";"), sep = "\n", file = DatabaseTable_2, append = TRUE)
     }
-    
-    
-    
     
     
     Belepo <- as.integer(gsub("\\s", "", as.character(worksheet_02[3, 12], fixed = TRUE))) #Tehergépkocsi belépő
@@ -90,10 +73,6 @@ process_second_table <- function() {
     Kilepo <- as.integer(gsub("\\s", "", as.character(worksheet_02[3, 15], fixed = TRUE))) #Motorkerékpár kilépő
     
     Osszesen <- sum(Belepo, Kilepo, na.rm = TRUE) #Motorkerékpár belépő + kilépő
-   # print("Motor")
-  #  print(Belepo)
-  #  print(Kilepo)
-  #  print(Osszesen)
     
     if (isNA_or_Zero(Belepo)){
       cat(paste(TEV, MHO, 2, MG05, MG60_4, Belepo, sep = ";"), sep = "\n", file = DatabaseTable_2, append = TRUE)
@@ -152,8 +131,6 @@ process_second_table <- function() {
     if (isNA_or_Zero(Osszesen)){
       cat(paste(TEV, MHO, "=", MG05, MG60, Osszesen, sep = ";"), sep = "\n", file = DatabaseTable_2, append = TRUE)
     }
-    
-    
     
     
     Belepo <- as.integer(gsub("\\s", "", as.character(worksheet_02[3, 18], fixed = TRUE))) #Vontató belépő

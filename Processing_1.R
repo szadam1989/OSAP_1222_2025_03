@@ -1,6 +1,6 @@
 #Külföld
 process_first_table_Abroad <- function() {
-#View(proc_01)
+
   for(i in 1:nrow(proc_01)){
     
     MG02 <- paste(proc_01[i, 2], "Hiányzik", sep = "")
@@ -19,6 +19,7 @@ process_first_table_Abroad <- function() {
     }
     
   }
+  
 }
 
 #Magyarország

@@ -20,6 +20,7 @@ process_first_worksheet_for_Modszertan <- function() {
     cat(paste(TEV, MHO, MG05, MG94, Belepo, Kilepo, Kilepo, Belepo, sep = ";"), sep = "\n", file = ExcelFile_1, append = TRUE)
     
   }
+  
 }
 
 #Magyarország

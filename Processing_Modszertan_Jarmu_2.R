@@ -134,7 +134,7 @@ process_second_worksheet_for_Modszertan <- function() {
               sep = ";"), sep = "\n", file = ExcelFile_2, append = TRUE)
     
     tipus <- tipus + 1
+    
   }
-
  
 }

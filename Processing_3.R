@@ -334,6 +334,7 @@ process_third_table <- function() {
       cat(paste(TEV, MHO, "=", "=", MG05, MG60, Osszesen, sep = ";"), sep = "\n", file = DatabaseTable_3, append = TRUE)
       cat(paste(TEV, MHO, "=", "=", MG05, MG60_3, Osszesen, sep = ";"), sep = "\n", file = DatabaseTable_3, append = TRUE)
     }
+    
   }
   
   
@@ -394,12 +395,6 @@ process_third_table <- function() {
       if (isNA_or_Zero(Osszesen)){
         cat(paste(TEV, MHO, "=", "=", MG05, MG60_5, Osszesen, sep = ";"), sep = "\n", file = DatabaseTable_3, append = TRUE)
       }
-      
-      
-      
-      
-      
-      
       
       
       #Személyhajó
@@ -632,11 +627,6 @@ process_third_table <- function() {
         cat(paste(TEV, MHO, "=", "=", MG05, MG60_4, Osszesen, sep = ";"), sep = "\n", file = DatabaseTable_3, append = TRUE)
       }
       
-      
-      
-      
-      
-      
     }
 
     if(MG59 == 4){
@@ -705,6 +695,7 @@ process_third_table <- function() {
         cat(paste(TEV, MHO, "=", "=", MG05, MG60, Osszesen, sep = ";"), sep = "\n", file = DatabaseTable_3, append = TRUE)
         cat(paste(TEV, MHO, "=", "=", MG05, MG60_2, Osszesen, sep = ";"), sep = "\n", file = DatabaseTable_3, append = TRUE)
       }
+      
     }
   
 }
